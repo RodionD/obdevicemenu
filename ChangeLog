@@ -1,0 +1,130 @@
+ChangeLog
+
+1.7.0 [2011-11-21]
+ * Add ability to blacklist devices based on arbitrary string matches
+ * Fix display of information fields that contain spaces
+
+1.6.1 [2011-09-20]
+ * Fix bug in fancy_sort() due to an incorrect variable declaration
+
+1.6.0 [2011-09-16]
+ * Refactor code
+ * Unset GREP_OPTIONS in case the user has it set in their environment
+ * Remove specification of the udisks command path in the configuration file
+ * Add some more comments
+ * For the sake of code clarity, remove the configuration options for setting
+   the display of custom text
+
+1.5.1 [2011-09-08]
+ * Add declaration of two variables
+
+1.5.0 [2011-09-06]
+ * Refactor code
+ * Add options to run any arbitrary commands immediately after a successful
+   mount or unmount operation, such as commands to set the spindown timeout
+
+1.4.1 [2011-08-21]
+ * Fix some bugs that occur when notifications are turned off
+
+1.4.0 [2011-05-26]
+ * Fix the declaration of arrays
+ * Fix handling of devices with 10 or more partitions
+ * Add a fancy_sort option in the configuration file for a very hacky way to
+   make sure /dev/sdc11 does not come before /dev/sdc2 in the menu (which
+   occurs due to a shortcoming of the sort command)
+ * Use printf instead of echo
+ * Remove eval
+
+1.3.0 [2011-05-23]
+ * Refactor code
+ * Exit correctly if there are errors on sourcing the configuration file
+
+1.2.0 [2011-05-19]
+ * Refactor code
+ * Improve configuration file
+ * Add support for matching /dev/mmcblk* devices such as SD card readers
+
+1.1.1 [2011-04-25]
+ * Refactor code
+
+1.1.0 [2011-04-23]
+ * Use --enumerate-device-files instead of --enumerate
+ * Fix string to match removable devices
+
+1.0.5 [2011-03-29]
+ * Fix display of device size information
+
+1.0.4 [2011-03-22]
+ * Fix display of optical media menu separator
+
+1.0.3 [2011-03-21]
+ * Refactor code
+ * Add option to hide the device filename and display only the label
+
+1.0.2 [2011-03-21]
+ * Add device label field to the device information sub-menu
+
+1.0.1 [2011-03-21]
+ * Fix display of device label if available
+
+1.0.0 [2011-03-20]
+ * Add options to set the text in menu entries and notification messages
+
+0.9.1 [2011-03-12]
+ * Fix sourcing of configuration file if $XDG_CONFIG_HOME is not set
+
+0.9.0 [2011-03-12]
+ * Refactor code
+ * Fix display of device label if it is mounted
+ * Improve configuration file
+ * Add menu to show more detailed device information
+ * Add option to unmount all devices
+
+0.8.13 [2011-03-11]
+ * Fix string to match Udisks information fields
+ * Add a check to make sure Udisks is functioning correctly and deal with
+   Udisks breakage more gracefully 
+
+0.8.12 [2011-03-11]
+ * Fix string to match removable devices
+
+0.8.11 [2011-03-10]
+ * Removable devices will now show the "label" field in preference
+
+0.8.10 [2011-03-10]
+ * Improve matching of removable devices with/without partitions
+
+0.8.9 [2011-03-10]
+ * Fix string to match removable devices
+
+0.8.8 [2011-03-10]
+ * Improve handling of optical devices
+ * Add the display of a useful message if Udisks is not installed
+ * Add this ChangeLog
+
+0.8.7 [2011-03-09]
+ * Refactor code
+
+0.8.6 [2011-03-09]
+ * Fix typos
+
+0.8.5 [2011-03-09]
+ * Improve handling of devices without a vendor, model or label
+
+0.8.4 [2011-03-08]
+ * Improve handling of blank optical discs
+
+0.8.3 [2011-03-08]
+ * Improve naming of optical media
+ * Improve README
+
+0.8.2 [2011-03-07]
+ * Fix naming of optical media
+
+0.8.1 [2011-03-07]
+ * Fix handling of drives that are not ejectable
+ * Fix handling of system internal drives
+ * Improve README
+
+0.8.0 [2011-03-07]
+ * Initial release
