@@ -36,7 +36,7 @@
 
 unset GREP_OPTIONS
 
-declare filemanager="/usr/bin/Thunar"
+declare filemanager="/usr/bin/spacefm"
 declare notify="/usr/bin/notify-send"
 declare notify_options="--expire-time=3000"
 declare optical_devices="-E ^/dev/sr[0-9]+"
@@ -76,7 +76,7 @@ if [[ -f "${CONFIGFILE}" ]]; then
 	fi
 fi
 
-if ! command -v udisks >/dev/null 2>&1; then
+if ! command -v udisksctl >/dev/null 2>&1; then
 	printf '%s\n' "<openbox_pipe_menu>"
 	printf '%s\n' "<separator label=\"obdevicemenu\" />"
 	printf '%s\n' "<item label=\"Udisks not installed\" />"
@@ -101,7 +101,7 @@ notify() {
 # Functions to retrieve information. These functions simply parse the output
 # of udisks --show-info.
 info_blank() {
-	udisks --show-info ${1} \
+	udisksctl status ${1} \
 		| grep -m 1 -w "^[[:space:]]*blank:" \
 		| awk '{print $2}'
 }
